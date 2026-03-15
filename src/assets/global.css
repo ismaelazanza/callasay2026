@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Oswald', sans-serif;
+  --color-brand: #e11d48;
+  --color-brand-dark: #be123c;
+  --color-gold: #f59e0b;
+  --color-gold-light: #fbbf24;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #09090b;
+  color: #fafafa;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(0.5); }
+  50% { transform: scaleY(1.5); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(225, 29, 72, 0.4); }
+  50% { box-shadow: 0 0 40px rgba(225, 29, 72, 0.8); }
+}
+
+.live-dot {
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
+
+.sound-wave span {
+  animation: wave 1.2s ease-in-out infinite;
+}
+
+.sound-wave span:nth-child(2) { animation-delay: 0.15s; }
+.sound-wave span:nth-child(3) { animation-delay: 0.3s; }
+.sound-wave span:nth-child(4) { animation-delay: 0.45s; }
+.sound-wave span:nth-child(5) { animation-delay: 0.6s; }
+
+.animate-fade-up {
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.7s ease-out forwards;
+}
+
+.glow-red {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #e11d48, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e11d48;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after { width: 100%; }
+.nav-link:hover { color: #e11d48; }
+
+.section-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(225, 29, 72, 0.8), transparent);
+}
+
+/* Radio Player */
+.player-bar {
+  background: linear-gradient(135deg, #18181b, #27272a);
+  border-top: 1px solid rgba(225, 29, 72, 0.3);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #09090b; }
+::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #e11d48; }

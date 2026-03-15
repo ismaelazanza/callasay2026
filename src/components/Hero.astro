@@ -1,0 +1,350 @@
+---
+import logo from '../assets/logolaunica.png';
+---
+
+<section id="inicio" class="relative min-h-screen flex flex-col justify-center overflow-hidden pt-16">
+
+  <!-- Background gradient -->
+  <div class="absolute inset-0 bg-gradient-to-br from-zinc-950 via-zinc-950 to-rose-950/20 pointer-events-none"></div>
+
+  <!-- Decorative grid -->
+  <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 50px 50px;"></div>
+
+  <!-- Decorative circles -->
+  <div class="absolute top-1/4 right-0 w-96 h-96 bg-rose-700/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute bottom-1/4 left-0 w-80 h-80 bg-amber-700/8 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left: Content -->
+      <div class="animate-fade-up">
+
+        <!-- Tag -->
+        <div class="inline-flex items-center gap-2 bg-rose-950/60 border border-rose-800/60 rounded-full px-4 py-2 mb-8">
+          <span class="live-dot w-2 h-2 rounded-full bg-rose-500"></span>
+          <span class="text-rose-300 text-sm font-semibold uppercase tracking-widest">Transmitiendo En Vivo</span>
+        </div>
+
+        <!-- Heading -->
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black leading-none mb-4" style="font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: -0.01em;">
+          <span class="text-white">La Radio</span><br />
+          <span class="gradient-text">de los Éxitos</span>
+        </h1>
+
+        <p class="text-zinc-400 text-xl font-light mb-8 max-w-lg">
+          Disfruta lo mejor de la música nacional, programación variada y locutores en vivo acompañándote las 24 horas del día.
+        </p>
+
+        <!-- Stats -->
+        <div class="flex flex-wrap gap-8 mb-10">
+          <div>
+            <div class="text-3xl font-bold text-white" style="font-family: 'Oswald', sans-serif;">24/7</div>
+            <div class="text-zinc-500 text-sm mt-1">Transmisión</div>
+          </div>
+          <div class="border-l border-zinc-800 pl-8">
+            <div class="text-3xl font-bold text-white" style="font-family: 'Oswald', sans-serif;">8+</div>
+            <div class="text-zinc-500 text-sm mt-1">Programas</div>
+          </div>
+          <div class="border-l border-zinc-800 pl-8">
+            <div class="text-3xl font-bold text-white" style="font-family: 'Oswald', sans-serif;">2</div>
+            <div class="text-zinc-500 text-sm mt-1">Países</div>
+          </div>
+        </div>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap gap-4">
+          <button
+            id="play-btn"
+            class="flex items-center gap-3 bg-rose-600 hover:bg-rose-500 text-white font-bold px-8 py-4 rounded-full transition-all glow-red text-sm uppercase tracking-wider"
+          >
+            <svg id="play-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            <svg id="pause-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+            </svg>
+            <span id="play-label">Escuchar Ahora</span>
+          </button>
+
+          <a
+            href="#programas"
+            class="flex items-center gap-3 border border-zinc-700 hover:border-rose-600 text-zinc-300 hover:text-white font-semibold px-8 py-4 rounded-full transition-all text-sm uppercase tracking-wider"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+            Ver Programas
+          </a>
+        </div>
+
+        <!-- App downloads -->
+        <div class="mt-8 flex items-center gap-4">
+          <span class="text-zinc-600 text-xs uppercase tracking-widest">Disponible en</span>
+          <a href="https://apps.apple.com/app/radio-callasay/id6446181564" target="_blank" class="flex items-center gap-2 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-lg transition-colors">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.7 9.05 7.37c1.29.07 2.18.74 2.94.8 1.12-.21 2.19-.9 3.4-.84 1.44.09 2.53.64 3.28 1.6-3.01 1.87-2.29 5.73.35 6.92-.46 1.26-.97 2.52-2 3.43zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+            </svg>
+            App Store
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=radio.callasaystereo" target="_blank" class="flex items-center gap-2 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 text-xs px-3 py-2 rounded-lg transition-colors">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M3.18 23.76c.35.2.74.24 1.12.12L13.6 13.6 4.34 4.34a1.5 1.5 0 00-.16.69v18c0 .27.07.52.2.73zM16.34 10.86L5.62 4.85l8.26 8.24 2.46-2.23zM20.1 10.5l-2.5-1.44-2.76 2.5 2.76 2.76L20.16 13c.7-.44 1.04-1.04 1.04-1.74s-.37-1.32-1.1-1.76zM5.62 19.15l10.72-6.01-2.46-2.46L5.62 19.15z"/>
+            </svg>
+            Google Play
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Player visual -->
+      <div class="flex justify-center lg:justify-end animate-fade-up">
+        <div class="relative w-full max-w-sm">
+
+          <!-- Player card -->
+          <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 relative overflow-hidden">
+
+            <!-- Inner glow -->
+            <div class="absolute inset-0 bg-gradient-to-br from-rose-900/10 via-transparent to-amber-900/10 pointer-events-none rounded-3xl"></div>
+
+            <!-- Album art -->
+            <div class="w-48 h-48 mx-auto mb-6 rounded-full shadow-2xl overflow-hidden ring-4 ring-rose-700/40">
+              <img src={logo.src} alt="Callasay Stereo" class="w-full h-full object-cover" />
+            </div>
+
+            <!-- Track info -->
+            <div class="text-center mb-6">
+              <p class="text-zinc-500 text-xs uppercase tracking-widest mb-1">Ahora suena</p>
+              <h3 class="text-white font-bold text-lg mb-1" style="font-family: 'Oswald', sans-serif;">La Única Callasay Stereo</h3>
+              <p class="text-zinc-400 text-sm">Transmisión en vivo — 24/7</p>
+            </div>
+
+            <!-- Sound waves -->
+            <div class="flex items-center justify-center gap-1 mb-6 h-10" id="waves-container">
+              <div class="sound-wave flex items-end gap-1 h-full">
+                <span class="w-1 h-3 bg-rose-500 rounded-full"></span>
+                <span class="w-1 h-6 bg-rose-500 rounded-full"></span>
+                <span class="w-1 h-8 bg-rose-400 rounded-full"></span>
+                <span class="w-1 h-5 bg-rose-500 rounded-full"></span>
+                <span class="w-1 h-4 bg-rose-500 rounded-full"></span>
+              </div>
+              <div class="mx-2 text-zinc-600 text-xs uppercase tracking-widest">EN VIVO</div>
+              <div class="sound-wave flex items-end gap-1 h-full">
+                <span class="w-1 h-4 bg-rose-500 rounded-full"></span>
+                <span class="w-1 h-5 bg-rose-500 rounded-full"></span>
+                <span class="w-1 h-8 bg-rose-400 rounded-full"></span>
+                <span class="w-1 h-6 bg-rose-500 rounded-full"></span>
+                <span class="w-1 h-3 bg-rose-500 rounded-full"></span>
+              </div>
+            </div>
+
+            <!-- Controls: share | play | volume -->
+            <div class="flex items-center justify-between px-2">
+
+              <!-- Share button + popup -->
+              <div class="relative" id="share-wrapper">
+                <button
+                  id="share-btn"
+                  class="w-10 h-10 flex items-center justify-center rounded-full text-zinc-500 hover:text-white hover:bg-zinc-800 transition-all"
+                  aria-label="Compartir"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/>
+                  </svg>
+                </button>
+
+                <!-- Share popup -->
+                <div
+                  id="share-popup"
+                  class="absolute bottom-full left-0 mb-3 hidden flex-col gap-2 bg-zinc-800 border border-zinc-700 rounded-2xl p-3 shadow-xl"
+                  style="width: 160px;"
+                >
+                  <p class="text-zinc-500 text-xs uppercase tracking-widest px-1 mb-1">Compartir</p>
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=https://laradiodemoda.com" target="_blank" rel="noopener"
+                    class="flex items-center gap-2 text-zinc-300 hover:text-white hover:bg-zinc-700 rounded-xl px-3 py-2 text-sm transition-colors">
+                    <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    Facebook
+                  </a>
+                  <a href="https://twitter.com/intent/tweet?text=Escucha%20La%20Unica%20Callasay%20Stereo%20en%20vivo&url=https://laradiodemoda.com" target="_blank" rel="noopener"
+                    class="flex items-center gap-2 text-zinc-300 hover:text-white hover:bg-zinc-700 rounded-xl px-3 py-2 text-sm transition-colors">
+                    <svg class="w-4 h-4 text-zinc-300" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    X / Twitter
+                  </a>
+                  <a href="https://wa.me/?text=Escucha%20La%20Unica%20Callasay%20Stereo%20en%20vivo%20https://laradiodemoda.com" target="_blank" rel="noopener"
+                    class="flex items-center gap-2 text-zinc-300 hover:text-white hover:bg-zinc-700 rounded-xl px-3 py-2 text-sm transition-colors">
+                    <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    WhatsApp
+                  </a>
+                </div>
+              </div>
+
+              <!-- Play / Pause -->
+              <button
+                id="player-btn"
+                class="w-16 h-16 rounded-full bg-rose-600 hover:bg-rose-500 flex items-center justify-center shadow-lg shadow-rose-900/50 transition-all"
+              >
+                <svg id="player-play-icon" class="w-7 h-7 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+                <svg id="player-pause-icon" class="w-7 h-7 text-white hidden" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                </svg>
+              </button>
+
+              <!-- Volume button + popup -->
+              <div class="relative" id="volume-wrapper">
+                <button
+                  id="volume-btn"
+                  class="w-10 h-10 flex items-center justify-center rounded-full text-zinc-500 hover:text-white hover:bg-zinc-800 transition-all"
+                  aria-label="Volumen"
+                >
+                  <svg id="vol-on-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                  </svg>
+                  <svg id="vol-off-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+                  </svg>
+                </button>
+
+                <!-- Volume popup (vertical slider) -->
+                <div
+                  id="volume-popup"
+                  class="absolute bottom-full right-0 mb-3 hidden flex-col items-center gap-2 bg-zinc-800 border border-zinc-700 rounded-2xl px-3 py-4 shadow-xl"
+                  style="width: 44px;"
+                >
+                  <span id="vol-pct" class="text-zinc-400 text-xs font-bold">80</span>
+                  <input
+                    id="volume-slider"
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="80"
+                    class="h-24 cursor-pointer accent-rose-500"
+                    style="writing-mode: vertical-lr; direction: rtl; -webkit-appearance: slider-vertical; width: 4px;"
+                    aria-label="Volumen"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating elements -->
+          <div class="absolute -top-4 -right-4 bg-amber-500 text-zinc-900 text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+            NUEVO SHOW
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-zinc-600">
+    <span class="text-xs uppercase tracking-widest">Scroll</span>
+    <svg class="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+    </svg>
+  </div>
+</section>
+
+<!-- Hidden audio player -->
+<audio id="radio-audio" preload="none">
+  <source src="https://sonic.streamseguro.com/8048/stream" type="audio/mpeg" />
+</audio>
+
+<script>
+  const audio = document.getElementById('radio-audio') as HTMLAudioElement;
+  const playBtn = document.getElementById('play-btn');
+  const playerBtn = document.getElementById('player-btn');
+  const playLabel = document.getElementById('play-label');
+  const volumeBtn = document.getElementById('volume-btn');
+  const volumePopup = document.getElementById('volume-popup');
+  const shareBtn = document.getElementById('share-btn');
+  const sharePopup = document.getElementById('share-popup');
+  const volOnIcon = document.getElementById('vol-on-icon');
+  const volOffIcon = document.getElementById('vol-off-icon');
+  const volPct = document.getElementById('vol-pct');
+  const volumeSlider = document.getElementById('volume-slider') as HTMLInputElement;
+
+  function closeAllPopups() {
+    volumePopup?.classList.add('hidden');
+    volumePopup?.classList.remove('flex');
+    sharePopup?.classList.add('hidden');
+    sharePopup?.classList.remove('flex');
+  }
+
+  const playIconTop = document.getElementById('play-icon');
+  const pauseIconTop = document.getElementById('pause-icon');
+  const playerPlayIcon = document.getElementById('player-play-icon');
+  const playerPauseIcon = document.getElementById('player-pause-icon');
+
+  let playing = false;
+
+  // Set initial volume
+  audio.volume = 0.8;
+
+  function togglePlay() {
+    if (!playing) {
+      audio.play().catch(() => {});
+      playing = true;
+      playLabel!.textContent = 'Pausar';
+      playIconTop?.classList.add('hidden');
+      pauseIconTop?.classList.remove('hidden');
+      playerPlayIcon?.classList.add('hidden');
+      playerPauseIcon?.classList.remove('hidden');
+    } else {
+      audio.pause();
+      playing = false;
+      playLabel!.textContent = 'Escuchar Ahora';
+      playIconTop?.classList.remove('hidden');
+      pauseIconTop?.classList.add('hidden');
+      playerPlayIcon?.classList.remove('hidden');
+      playerPauseIcon?.classList.add('hidden');
+    }
+  }
+
+  function updateVolIcon(val: number) {
+    if (val === 0 || audio.muted) {
+      volOnIcon?.classList.add('hidden');
+      volOffIcon?.classList.remove('hidden');
+    } else {
+      volOnIcon?.classList.remove('hidden');
+      volOffIcon?.classList.add('hidden');
+    }
+  }
+
+  // Share button: toggle popup
+  shareBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isHidden = sharePopup?.classList.contains('hidden');
+    closeAllPopups();
+    if (isHidden) {
+      sharePopup?.classList.remove('hidden');
+      sharePopup?.classList.add('flex');
+    }
+  });
+
+  // Volume button: toggle popup
+  volumeBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isHidden = volumePopup?.classList.contains('hidden');
+    closeAllPopups();
+    if (isHidden) {
+      volumePopup?.classList.remove('hidden');
+      volumePopup?.classList.add('flex');
+    }
+  });
+
+  // Close popups when clicking outside
+  document.addEventListener('click', () => closeAllPopups());
+
+  // Volume slider
+  volumeSlider?.addEventListener('input', () => {
+    const val = Number(volumeSlider.value);
+    audio.volume = val / 100;
+    audio.muted = val === 0;
+    if (volPct) volPct.textContent = String(val);
+    updateVolIcon(val);
+  });
+
+  playBtn?.addEventListener('click', togglePlay);
+  playerBtn?.addEventListener('click', togglePlay);
+</script>
